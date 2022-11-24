@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public class ImageRepo {
 
-	private final HashSet<ImageData> imageSet;
+	private final LinkedList<ImageData> toBeEvaluatedList;
 
 	/**
 	 * Class constructor, used for instantiate a full instance of the ImageRepo.
@@ -17,7 +17,7 @@ public class ImageRepo {
 	 *                        images.
 	 */
 	public ImageRepo(String imageFolderPath) {
-		imageSet = new HashSet<>();
+		toBeEvaluatedList = new LinkedList<>();
 
 		try {
 			fillImageRepo(imageFolderPath);
@@ -29,8 +29,8 @@ public class ImageRepo {
 	/**
 	 * Simple imageSet getter method.
 	 */
-	public HashSet<ImageData> getImageSet() {
-		return imageSet;
+	public LinkedList<ImageData> getToBeEvaluatedList() {
+		return toBeEvaluatedList;
 	}
 
 	/**
@@ -47,7 +47,7 @@ public class ImageRepo {
 		Iterator<File> iterator = Arrays.stream(imageFiles).iterator();
 
 		while (iterator.hasNext()) {
-			imageSet.add(fromImageFileToImageData(iterator.next()));
+			toBeEvaluatedList.add(fromImageFileToImageData(iterator.next()));
 		}
 	}
 
