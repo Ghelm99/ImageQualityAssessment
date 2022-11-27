@@ -4,19 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21e83728-fd50-4a15-9a34-16f90da32427" name="Changes" comment="Adding an important comment to main">
-      <change afterPath="$PROJECT_DIR$/.idea/saveactions_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repo.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/IqaFrameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="21e83728-fd50-4a15-9a34-16f90da32427" name="Changes" comment="Adding new features to complete the first running version of the app">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/ImageData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/ImageData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/ImageRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/ImageRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/MyFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/IqaFrame.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/MyFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/IqaFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +45,9 @@
     "WebServerToolWindowFactoryState": "false",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "settings.saveactions"
   }
 }]]></component>
@@ -106,8 +98,17 @@
       <workItem from="1669412670640" duration="55000" />
       <workItem from="1669469451356" duration="11751000" />
       <workItem from="1669564528125" duration="7434000" />
-      <workItem from="1669583183870" duration="1989000" />
+      <workItem from="1669583183870" duration="2281000" />
+      <workItem from="1669585877528" duration="131000" />
     </task>
+    <task id="LOCAL-00001" summary="Adding new features to complete the first running version of the app">
+      <created>1669585460948</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669585460948</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,5 +124,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Adding new features to complete the first running version of the app" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding new features to complete the first running version of the app" />
   </component>
 </project>
