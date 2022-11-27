@@ -8,47 +8,55 @@ import java.util.stream.Collectors;
 
 public class ImageRepo {
 
-	private final LinkedList<ImageData> toBeEvaluatedList;
+	private final ArrayList<ImageData> toBeEvaluatedList;
+
+	private final File repoFile;
 
 	/**
 	 * Class constructor, used for instantiate a full instance of the ImageRepo.
 	 *
 	 * @param imageFolderPath refers to the absolute path (starting from the project directory) of directory containing
 	 *                        images.
+	 * @param repoFilePath    refers to the absolute path (starting from the project directory) of the CSV file used to
+	 *                        save the assessment results.
 	 */
-	public ImageRepo(String imageFolderPath) {
-		toBeEvaluatedList = new LinkedList<>();
+	public ImageRepo(String imageFolderPath, String repoFilePath) {
+		toBeEvaluatedList = new ArrayList<>();
 
 		try {
 			fillImageRepo(imageFolderPath);
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
-	}
 
-	/**
-	 * Simple imageSet getter method.
-	 */
-	public LinkedList<ImageData> getToBeEvaluatedList() {
-		return toBeEvaluatedList;
+		repoFile = new File(repoFilePath);
+
 	}
 
 	/**
 	 * Private method used to fill the image HashSet.
 	 *
 	 * @param imageFolderPath refers to the absolute path (starting from the project directory) of directory containing
-	 *                        *                        images.
+	 *                                           images.
 	 */
 	private void fillImageRepo(String imageFolderPath) throws IOException {
+
 		File imageDirectory = new File(imageFolderPath);
 		File[] imageFiles = imageDirectory.listFiles();
 
-		assert imageFiles != null;
-		Iterator<File> iterator = Arrays.stream(imageFiles).iterator();
+		Iterator<File> iterator = null;
+		if (imageFiles != null) {
+			iterator = Arrays.stream(imageFiles).iterator();
 
-		while (iterator.hasNext()) {
-			toBeEvaluatedList.add(fromImageFileToImageData(iterator.next()));
+			while (iterator.hasNext()) {
+				toBeEvaluatedList.add(fromImageFileToImageData(iterator.next()));
+			}
+		} else {
+
+			throw new IOException("The imageFolder doesn't contain images!");
+
 		}
+
 	}
 
 	/**
@@ -66,4 +74,17 @@ public class ImageRepo {
 		return new ImageData(ImageIO.read(imageFile), Integer.parseInt(impairmentLevel), 0, imageFile.getName());
 	}
 
+	/**
+	 * Simple repoFile getter method.
+	 */
+	public File getRepoFile() {
+		return repoFile;
+	}
+
+	/**
+	 * Simple imageSet getter method.
+	 */
+	public ArrayList<ImageData> getToBeEvaluatedList() {
+		return toBeEvaluatedList;
+	}
 }
